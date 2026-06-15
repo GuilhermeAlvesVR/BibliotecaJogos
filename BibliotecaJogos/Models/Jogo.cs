@@ -15,5 +15,8 @@ namespace BibliotecaJogos.Models
 
         // Navegação — um Jogo tem muitas Avaliações
         public List<Avaliacao> Avaliacoes { get; set; } = new();
+
+        // Navegacao N:N: um Jogo pode ter varias Tags.
+        public List<Tag> Tags { get; set; } = new();
     }
 }

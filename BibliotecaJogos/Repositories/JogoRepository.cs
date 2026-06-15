@@ -135,7 +135,10 @@ namespace BibliotecaJogos.Repositories
 
         public List<Jogo> ListarTodos()
         {
-            return _ctx.Jogos.Include(j => j.Avaliacoes).ToList();
+            return _ctx.Jogos
+                .Include(j => j.Avaliacoes)
+                .Include(j => j.Tags)
+                .ToList();
         }
     }
 }
